@@ -51,20 +51,20 @@ public class ItemLasso extends Item {
 		NBTTagCompound nbt = NBTHelper.getBaseTag(stack);
 		
 		// Cannot capture boss.
-		if (!target.isNonBoss()) {
-			if (!player.world.isRemote) {
-				Msg.tellPlayer(player, "tinymobfarm.error.cannot_capture_boss");
-			}
-			return true;
-		}
+		//if (!target.isNonBoss()) {
+			//if (!player.world.isRemote) {
+				//Msg.tellPlayer(player, "tinymobfarm.error.cannot_capture_boss");
+			//}
+			//return true;
+		//}
 		
 		// Blacklist.
-		if (EntityHelper.isMobBlacklisted((EntityLiving) target)) {
-			if (!player.world.isRemote) {
-				Msg.tellPlayer(player, "tinymobfarm.error.blacklisted_mob");
-			}
-			return true;
-		}
+		//if (EntityHelper.isMobBlacklisted((EntityLiving) target)) {
+			//if (!player.world.isRemote) {
+				//Msg.tellPlayer(player, "tinymobfarm.error.blacklisted_mob");
+			//}
+			//return true;
+		//}
 		
 		if (!player.world.isRemote) {
 			NBTTagCompound mobData = target.serializeNBT();
